@@ -1,0 +1,68 @@
+name: Add a paper
+description: Suggest an embodied-agent paper or resource / 推荐论文或资源
+title: "[Add] "
+body:
+  - type: markdown
+    attributes:
+      value: "Thank you for contributing! Please check the README for duplicates. 欢迎推荐，请先检查是否已收录。"
+  - type: input
+    id: paper_title
+    attributes:
+      label: Paper or resource title / 标题
+      placeholder: Full title
+    validations:
+      required: true
+  - type: input
+    id: paper_url
+    attributes:
+      label: Official paper or resource URL / 官方链接
+      placeholder: https://arxiv.org/abs/...
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Suggested category / 建议分类
+      options:
+        - Surveys
+        - Foundation Models and VLA
+        - Perception and Spatial Grounding
+        - Reasoning, Planning and Tool Use
+        - Memory and Lifelong Learning
+        - World Models and Prediction
+        - Navigation and Exploration
+        - Manipulation and Control
+        - Multi-Agent Cooperation
+        - Evaluation and Reliability
+        - Datasets
+        - Benchmarks
+        - Simulators
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: First public release date / 首次公开日期
+      placeholder: YYYY-MM-DD; use arXiv v1 when applicable
+  - type: input
+    id: venue
+    attributes:
+      label: Venue / 会议或期刊
+      placeholder: Verified venue and year, or arXiv
+  - type: input
+    id: code_url
+    attributes:
+      label: Official code / 官方代码
+      placeholder: https://github.com/...
+  - type: input
+    id: project_url
+    attributes:
+      label: Project page / 项目页
+      placeholder: https://...
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Relevance and contribution / 收录理由
+      description: Explain the embodied task, agent loop, and main contribution. 可用中文或英文。
+    validations:
+      required: true

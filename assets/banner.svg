@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="420" viewBox="0 0 1440 420" role="img" aria-labelledby="title desc">
+  <title id="title">Awesome Embodied Agents</title>
+  <desc id="desc">An illustrated research collection connecting perception, reasoning, memory, planning, action, and learning.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101b2a"/>
+      <stop offset="1" stop-color="#153c42"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#a8e6d4" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="1440" height="420" rx="24" fill="url(#bg)"/>
+  <rect width="1440" height="420" rx="24" fill="url(#grid)"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="64" y="52" width="186" height="28" rx="14" fill="#b7f4da" fill-opacity=".12"/>
+    <text x="157" y="71" font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#b7f4da">RESEARCH COLLECTION</text>
+    <text x="64" y="154" font-size="54" font-weight="700" letter-spacing="-1.5" fill="#f0f9f6">Awesome</text>
+    <text x="64" y="221" font-size="62" font-weight="700" letter-spacing="-2" fill="#b7f4da">Embodied Agents</text>
+    <text x="67" y="264" font-size="18" fill="#b2c8c6">From grounded perception to purposeful action.</text>
+    <g transform="translate(67 314)" font-size="12" letter-spacing="1.3" fill="#b2c8c6">
+      <text x="0" y="17">PAPERS</text>
+      <circle cx="86" cy="13" r="2" fill="#6ecfb3"/>
+      <text x="107" y="17">DATASETS</text>
+      <circle cx="212" cy="13" r="2" fill="#6ecfb3"/>
+      <text x="233" y="17">BENCHMARKS</text>
+      <circle cx="368" cy="13" r="2" fill="#6ecfb3"/>
+      <text x="389" y="17">SIMULATORS</text>
+    </g>
+    <g transform="translate(1080 208)">
+      <circle r="126" fill="none" stroke="#7eddbf" stroke-width="1" stroke-opacity=".25" stroke-dasharray="5 9"/>
+      <path d="M0-126A126 126 0 0 1 109 63M109 63A126 126 0 0 1-109 63M-109 63A126 126 0 0 1 0-126" fill="none" stroke="#7eddbf" stroke-width="2" stroke-opacity=".5"/>
+      <circle r="62" fill="#b7f4da" fill-opacity=".08" stroke="#b7f4da" stroke-opacity=".45"/>
+      <rect x="-31" y="-22" width="62" height="44" rx="13" fill="none" stroke="#d4ffed" stroke-width="2"/>
+      <circle cx="-12" cy="-3" r="4" fill="#d4ffed"/>
+      <circle cx="12" cy="-3" r="4" fill="#d4ffed"/>
+      <path d="M-10 10H10M0-22V-32" stroke="#d4ffed" stroke-width="2" stroke-linecap="round"/>
+      <circle cy="-36" r="4" fill="#7eddbf"/>
+      <g fill="#142e37" stroke="#71c5ad" stroke-width="1.2">
+        <rect x="-58" y="-145" width="116" height="38" rx="19"/>
+        <rect x="63" y="-83" width="116" height="38" rx="19"/>
+        <rect x="63" y="45" width="116" height="38" rx="19"/>
+        <rect x="-58" y="107" width="116" height="38" rx="19"/>
+        <rect x="-179" y="45" width="116" height="38" rx="19"/>
+        <rect x="-179" y="-83" width="116" height="38" rx="19"/>
+      </g>
+      <g fill="#d4ffed" font-size="13" font-weight="600" letter-spacing=".6" text-anchor="middle">
+        <text x="0" y="-121">PERCEIVE</text>
+        <text x="121" y="-59">REASON</text>
+        <text x="121" y="69">PLAN</text>
+        <text x="0" y="131">ACT</text>
+        <text x="-121" y="69">LEARN</text>
+        <text x="-121" y="-59">REMEMBER</text>
+      </g>
+    </g>
+  </g>
+</svg>

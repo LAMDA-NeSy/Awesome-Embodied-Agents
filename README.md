@@ -6,8 +6,8 @@
   <a href="#survey"><img src="https://img.shields.io/badge/papers-141-3b82f6" alt="Papers: 141"></a>
   <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/graphs/contributors"><img src="https://img.shields.io/github/contributors/LAMDA-NeSy/Awesome-Embodied-Agents" alt="GitHub contributors"></a>
   <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/commits/main"><img src="https://img.shields.io/github/last-commit/LAMDA-NeSy/Awesome-Embodied-Agents" alt="GitHub last commit"></a>
-  <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/stargazers"><img src="https://img.shields.io/github/stars/LAMDA-NeSy/Awesome-Embodied-Agents?style=social" alt="GitHub stars"></a>
-  <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/forks"><img src="https://img.shields.io/github/forks/LAMDA-NeSy/Awesome-Embodied-Agents?style=social" alt="GitHub forks"></a>
+  <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/stargazers"><img src="https://img.shields.io/github/stars/LAMDA-NeSy/Awesome-Embodied-Agents?style=social&amp;label=Stars" alt="GitHub stars"></a>
+  <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/forks"><img src="https://img.shields.io/github/forks/LAMDA-NeSy/Awesome-Embodied-Agents?style=social&amp;label=Forks" alt="GitHub forks"></a>
 </p>
 
 <p align="center">

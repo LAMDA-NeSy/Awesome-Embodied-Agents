@@ -1,78 +1,109 @@
 # Paper Title
 
-## 基本信息
+## Metadata
 
-| 字段 | 内容 |
+| Field | Value |
 | :--- | :--- |
-| 论文 | 完整标题与论文链接 |
-| 作者 / 机构 | 根据原文填写 |
-| 会议 / 期刊 | 已核验的出版信息 |
-| 首次公开日期 | YYYY-MM-DD |
-| 代码 / 项目 | 官方链接；尚未记录时写 `—` |
-| 主分类 / 关联主题 | 参照主页与分类说明 |
-| 阅读日期 / 状态 | YYYY-MM-DD；待精读 / 阅读中 / 已精读 / 已复现 |
+| Paper | Full title and primary-source link |
+| Authors / institutions | As reported in the paper |
+| Venue | `Arxiv YYYY-MM` using Arxiv v1; retain any verified venue and edition year above it with `<br>` |
+| First public release month | YYYY-MM; use Arxiv v1 when applicable |
+| Code / project | Official links; use `—` when not recorded |
+| Category | Survey / Harness / Model Training / Benchmark |
+| Task | Specific game titles or robot tasks |
+| Domain | Game / Robot / Game + Robot |
+| Agent setup | Custom / General-purpose / Not applicable (native-use model) / Unspecified |
+| Reading year / status | YYYY; To read / In progress / Read / Reproduced |
 
-## 一句话理解
+## One-Sentence Summary
 
-用自己的话说明：针对什么任务，以什么关键机制，解决什么问题？
+What does the agent program or learn, for which embodied task, and with what key mechanism?
 
-## 研究问题
+## Scope and Classification Evidence
 
-- 现有方法的具体瓶颈：
-- 本文的核心假设：
-- 为什么这个问题与 Embodied Agent 有关：
+- Generated or edited code artifact:
+- Game or robot contribution:
+- Evidence for the primary category:
+- Evidence for Custom versus General-purpose setup, with a paper section or official implementation link:
+- Actual coding-agent harness and language model, recorded separately:
+- For Model Training: which foundation/reasoning/code-generation model receives weight updates, and what does it output during deployment?
+- For native-use training references without program generation: record the action interface and mark code-specific fields Not applicable.
+- For tool/skill or semantic-action harnesses without program generation: describe the runtime and model-facing interface; mark code-generation fields Not applicable.
 
-## 智能体闭环
+## Environment and Interface
 
-| 环节 | 本文如何实现 |
+| Aspect | Details |
 | :--- | :--- |
-| 环境与本体 | 真实机器人 / 仿真 / 游戏；具体平台 |
-| Observation | RGB、深度、点云、本体状态、语言等 |
-| Representation | 环境表征、空间 grounding、场景图等 |
-| Memory | 是否维护记忆；存储、检索、更新方式 |
-| Reasoning / Planning | 任务分解、技能选择、重规划方式 |
-| Action | 离散动作、技能 API、末端位姿、关节控制等 |
-| Feedback | 成功检测、环境反馈、纠错、自我改进方式 |
+| Environment | Game title / simulator / robot platform |
+| Embodiment | Avatar, controllable units, robot arm, mobile robot, or other interface |
+| Deployment | Game / robot simulation / physical robot |
+| Observations | Screenshots, depth, poses, world-state APIs, proprioception, etc. |
+| Privileged information | What information is exposed that a deployed agent or human would not normally observe? |
+| Action interface | Game API, keyboard/mouse, skill SDK, Cartesian commands, joint control, etc. |
+| World clock | Does the environment advance or pause during model inference? |
+| Human-provided scaffolding | Primitive skills, maps, demonstrations, task-specific code, API documentation |
+| Reset and verification | How resets and success judgments are implemented; any human involvement |
 
-## 方法与主要贡献
+## Code-Agent Loop
 
-1. 核心模块及其输入输出：
-2. 与最接近方法的差异：
-3. 支持贡献成立的消融或证据：
-
-## 数据与学习设置
-
-- 训练数据和监督信号：
-- 预训练 / 微调 / 模仿学习 / 强化学习 / 推理时策略：
-- 模型、感知模块、技能库等依赖：
-
-## 实验与结论
-
-| 项目 | 记录 |
+| Component | Details |
 | :--- | :--- |
-| 任务与评测环境 | |
-| 基线与指标 | |
-| 主要结果 | 数值注明原文表格或章节 |
-| 泛化设置 | 新任务、新场景、新物体、新本体等 |
-| 失败案例 | |
+| Program artifact | Task script, callable skill, reward, environment generator, policy repository, etc. |
+| Generation / editing | Prompt pipeline, agent tools, file editing, search operator, or other mechanism |
+| Execution | Runtime, sandbox, simulator, robot SDK, and execution granularity |
+| Feedback | Errors, stdout, images, reward, success predicates, or human feedback |
+| Repair | What is revised, when, and under what retry budget? |
+| Persistence | Reusable code, skill library, notes, repository, learned weights, or none |
+| Agent organization | Single agent, planner/executor, team, or other configuration |
 
-## 局限与自己的判断
+## Adaptation and Deployment
 
-- 作者明确说明的局限：
-- 自己的理解与推断：
-- 待核实问题：
+- When is code generated: before deployment, during task execution, or between episodes?
+- What is optimized: a program, a skill library, a reward, model weights, or a full codebase?
+- What remains fixed during evaluation?
+- Does deployment retain the coding agent, run frozen code, or use a learned policy?
 
-## 与其他工作的联系
+### Agent-Model Training
 
-- 最接近的论文和关键差异：
-- 对自己综述、实验或选题的启发：
+- Trained agent model and initialized checkpoint:
+- Parameters updated and parameters kept fixed:
+- Training objective: SFT, RL, or other:
+- Training data or environments and reward/supervision source:
+- Agent output interface: executable code, tool calls, or structured actions:
+- Is a separate downstream robot policy trained? How does it relate to the agent model?
 
-## 后续行动
+## Main Contributions
 
-- [ ] 补读相关工作。
-- [ ] 检查官方代码与运行说明。
-- [ ] 核实关键实验设置。
+1. Central method and generated artifact:
+2. Difference from the closest code-agent baseline:
+3. Ablation or evidence supporting the proposed mechanism:
 
-## 引用
+## Evaluation
 
-按需粘贴官方 BibTeX，并记录原文页码、图号或表号。
+| Item | Record |
+| :--- | :--- |
+| Tasks and exact environment versions | |
+| Model and agent-harness configurations | |
+| Baselines and matched scaffolding | |
+| Success metrics and number of trials | |
+| Wall-clock / token / rollout / training budgets | |
+| Transfer across tasks, environments, or embodiments | |
+| Main results and source table/figure | |
+| Failure cases and intervention rate | |
+
+## Interpretation and Open Questions
+
+- Limitations stated by the authors:
+- My interpretation, clearly distinguished from reported evidence:
+- Unresolved questions:
+- Comparability with papers using different observations or action abstractions:
+
+## Connections and Next Steps
+
+- Related Game / Robot papers in the same catalogue category:
+- Relevant differences between Custom and General-purpose setups:
+- Follow-up reading or reproduction actions:
+
+## References
+
+Add official BibTeX if useful. Cite paper sections, figures, and tables for detailed claims.

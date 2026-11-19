@@ -1,15 +1,26 @@
-## Changes / 修改内容
+## Changes
 
 Describe the paper, resource, reading note, or correction.
 
-## Sources / 核验来源
+## Category and Scope
 
-Link to the official paper, project page, or repository supporting the metadata.
+Select Survey, Harness, Model Training, or Benchmark. Explain the main contribution and its connection to code agents, embodied harnesses, or native agent-model training in games or robotics.
+
+## Sources
+
+Provide verified publication information, task types, and paper/code/project links. Include the first public release month (`YYYY-MM`) and a primary-source link for chronological sorting.
 
 ## Checklist
 
-- [ ] The contribution fits the scope and is not a duplicate.
-- [ ] Titles, release dates, venues, and links are verified.
-- [ ] Papers are placed in one primary category and sorted by first release date, newest first.
-- [ ] Markdown tables and links render correctly in Preview.
+- [ ] The contribution fits the code-agent and game/robot scope and is not a duplicate.
+- [ ] The category follows the paper's primary contribution.
+- [ ] Harness entries identify the native code/tool/skill/action interface and distinguish custom frameworks from general-purpose coding agents.
+- [ ] Model Training entries identify the agent model being trained and its objective; downstream robot-policy training is distinguished from agent-model training.
+- [ ] Each paper row uses exactly Paper, Venue, Task, and Links, with the primary paper linked through its full title.
+- [ ] Venue shows the first release month as `Arxiv YYYY-MM` (v1), with any verified formal venue and edition year above it using `<br>`; work without Arxiv uses `Released YYYY-MM`.
+- [ ] Task contains game titles or concrete robot tasks.
+- [ ] Links contains only official 💻 Code and 🌐 Project Page links, one per line using `<br>`; use `—` if neither is available.
+- [ ] Sections follow Survey, Harness, Model Training, Benchmark; rows are sorted by first release month (Arxiv v1 when available), newest first, then full title alphabetically within the same month, ignoring case.
+- [ ] Markdown tables and local links render correctly in Preview.
 - [ ] New reading notes are included in the note index, if applicable.
+- [ ] Repository content is written in English.

@@ -1,20 +1,26 @@
-# Reading Notes · 阅读笔记
+# Reading Notes
 
-从 [TEMPLATE.md](TEMPLATE.md) 复制一份，按 `YYYY-short-name.md` 命名。可用中文或英文记录自己的理解。
+Copy [TEMPLATE.md](TEMPLATE.md) to `YYYY-short-name.md` and write the note in English.
 
-精读笔记重点回答：论文解决什么问题、智能体如何形成闭环、效果由什么实验支持，以及方法的适用边界在哪里。
+A useful note explains what the code agent programs, how the program affects a game or robot, what feedback closes the loop, and which artifacts persist across attempts or tasks.
+
+For Model Training, record the agent model receiving weight updates, its objective, and its deployment output interface. Native-use models can emit structured actions without executable program generation.
 
 ## Index
 
-笔记索引从这里开始。完成笔记后，删除下面代码中的占位字段，加入对应表格行：
+Link each paper through its full title, as in the main catalogue. This index uses a dedicated Notes column for the local reading note:
 
-| Paper | Topic | Note | Reading Date |
-| :--- | :--- | :--- | :---: |
+| Paper | Venue | Task | Notes |
+| :--- | :---: | :--- | :--- |
+| **[Envisioning Agentic Robotics: A New Era of Robotic Systems](https://arxiv.org/abs/2611.18359)** | Arxiv 2026-11 | Agentic robotics; Manipulation; Navigation | [📝&nbsp;Notes](2026-envisioning-agentic-robotics.md) |
+| **[Training Reasoning Models in Simulation to Natively Use Real Robots](https://arxiv.org/abs/2611.18562)** (PEAR) | Arxiv 2026-11 | Manipulation; Object pickup; Block alignment | [📝&nbsp;Notes](2026-pear.md) |
+| **[Towards Agentic Robots: Model, Data, Environment, and Harness](https://arxiv.org/abs/2610.20442)** | Arxiv 2026-10 | Agentic robotics; Manipulation; Navigation | [📝&nbsp;Notes](2026-towards-agentic-robots.md) |
+| **[Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds](https://arxiv.org/abs/2605.09965)** | Arxiv 2026-05 | Game agents; Virtual worlds; Cross-game generalization | [📝&nbsp;Notes](2026-generalist-game-agents.md) |
 
 ```markdown
-| [Paper Title](PAPER_URL) | Primary Topic | [Notes](YYYY-short-name.md) | YYYY-MM-DD |
+| **[Full Paper Title](PAPER_URL)** | Arxiv YYYY-MM | Minecraft | [📝&nbsp;Notes](YYYY-short-name.md) |
 ```
 
-## 阅读状态
+## Reading Status
 
-在笔记内部标记 `待精读`、`阅读中`、`已精读` 或 `已复现`。主页论文表保持统一的文献索引格式。
+Use `To read`, `In progress`, `Read`, or `Reproduced` inside the note. Record the catalogue category, first public release date, agent setup, and detailed experimental conditions in the note rather than adding catalogue columns.

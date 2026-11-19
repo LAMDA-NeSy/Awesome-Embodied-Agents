@@ -1,65 +1,65 @@
-# Contributing · 贡献指南
+# Contributing
 
-欢迎补充论文、数据集、评测基准、仿真器和阅读笔记，也欢迎修复现有条目。
+Contributions to the paper catalogue, environment resources, reading notes, and metadata corrections are welcome. Please write repository content in English.
 
-## 收录范围
+## Check the Scope
 
-围绕在真实或模拟空间中进行感知、决策和行动的具身智能体，优先收录具有明确技术贡献、公开论文和可核验来源的工作。相关的机器人学习基础方法也可以收录。具体分类见 [TAXONOMY.md](docs/TAXONOMY.md)。
+Read [docs/TAXONOMY.md](docs/TAXONOMY.md). Include code-generation, code-agent, and embodied harness research grounded in games or robotics, covering both custom frameworks and general-purpose coding agents.
 
-## 添加论文
+For code-based methods, identify what code the agent creates or modifies, where it is executed, what feedback it receives, and which embodied tasks establish relevance. For tool/skill or action-interface harnesses, describe the runtime, model-facing interface, feedback, and substantive orchestration mechanism; do not assume executable program generation. See the [harness guide](docs/HARNESS_GUIDE.md). Survey entries may cover system-level agentic robotics; benchmark entries may provide broader embodied-agent evaluation. For benchmarks, record the measured capability and tested interface in the [benchmark guide](docs/BENCHMARK_GUIDE.md) or a reading note.
 
-1. 在 [README.md](README.md) 中搜索标题或 arXiv 编号，确认尚未收录。
-2. 根据主要技术贡献选择一个分类，在该分类表格中插入一行。
-3. 按首次公开日期倒序排列；同一天的条目可按标题字母排序。
-4. 使用完整论文标题；方法简称可追加在标题末尾。链接优先采用 arXiv 摘要页、会议论文页或 DOI。
-5. 核验日期、会议或期刊、代码和项目页。条目信息以作者项目页、官方代码库和论文出版页为准。
+Model Training also includes native game/robot-use models. For these entries, identify the foundation or reasoning model being trained, the objective, the embodied training tasks, and whether deployment outputs code, tool calls, or structured actions. Record these details in a reading note, as in the [PEAR example](notes/2026-pear.md).
 
-复制下面的表格行，并替换字段：
+## Add a Paper
 
-```markdown
-| [**Full Paper Title**](PAPER_URL) | VENUE | YYYY-MM-DD | [Code](CODE_URL) | [Project](PROJECT_URL) |
-```
-
-没有记录的代码或项目页统一写 `—`，不要保留占位链接：
+1. Search [README.md](README.md) for the title or Arxiv identifier to avoid duplicates.
+2. Select one category: `Survey`, `Harness`, `Model Training`, or `Benchmark`, in that display order.
+3. Insert one row using the four-column format below.
+4. Verify publication information, task types, and official links with primary sources.
+5. Sort by first paper release month (`YYYY-MM`), newest first within the category; use Arxiv v1 when available, otherwise the first official paper release. Within the same month, sort by the full paper title in ascending, case-insensitive alphabetical order; do not use the day or method alias to break ties.
 
 ```markdown
-| [**Full Paper Title**](PAPER_URL) | arXiv | YYYY-MM-DD | — | — |
+| Paper | Venue | Task | Links |
+| :--- | :---: | :--- | :--- |
+| **[Full Paper Title](PAPER_URL)** | ICML 2024<br>Arxiv 2024-02 | Manipulation; Navigation | [💻&nbsp;Code](CODE_URL)<br>[🌐&nbsp;Project&nbsp;Page](PROJECT_URL) |
 ```
 
-## 字段约定
-
-| 字段 | 约定 |
-| :--- | :--- |
-| Title | 完整标题；保留原文，简称可放在括号中 |
-| Venue | 已核验的会议或期刊及年份，例如 `ICML 2025`；尚未记录其他出版信息时填 `arXiv` |
-| Date | 首次公开日期，格式为 `YYYY-MM-DD`；arXiv 论文使用 v1 日期 |
-| Code | 官方实现；第三方实现需明确标注 `[Unofficial]` |
-| Project | 作者项目页，可包含视频、Demo 或模型下载入口 |
-
-会议年份和首次公开年份不同是正常情况。后续修订、补开源或录用时更新相应字段，保留首次公开日期。
-
-同一篇论文在主页只出现于一个主要分类；数据集或评测论文可以同时出现在对应资源索引中。跨主题联系可写在阅读笔记中。
-
-## 添加资源
-
-将资源加入 `Awesome Datasets`、`Awesome Benchmarks` 或 `Awesome Simulators` 的相应表格。说明主要用途，并链接官方仓库或项目页。
+For an Arxiv preprint with only a recorded paper link:
 
 ```markdown
-| **Resource Name** | Short description of its focus | [Repository](OFFICIAL_URL) |
+| **[Full Paper Title](PAPER_URL)** | Arxiv YYYY-MM | Minecraft | — |
 ```
 
-## 添加阅读笔记
+## Column Conventions
 
-1. 复制 [notes/TEMPLATE.md](notes/TEMPLATE.md)，命名为 `YYYY-short-name.md`。
-2. 用自己的语言填写问题、方法、智能体闭环、实验和局限；可使用中文或英文。
-3. 在 [notes/README.md](notes/README.md) 中添加索引行。
-4. 区分论文结论、自己的理解和待核实问题。
+- **Paper:** link the full title directly to the primary paper. Keep an optional method alias outside the title link.
+- **Venue:** show the first Arxiv submission month (v1) as `Arxiv YYYY-MM`, for example `Arxiv 2026-11`. For published papers, retain the verified conference/journal and edition year on the first line, followed by the Arxiv month on a second line, for example `ICML 2024<br>Arxiv 2024-02`. For work without Arxiv, record the first official release as `Released YYYY-MM` beneath the venue.
+- **Task:** use concrete game names or tasks, such as `Minecraft`, `Manipulation`, `Navigation`, or `Locomotion`. Separate multiple tasks with semicolons.
+- **Links:** include only available official `[💻 Code]` and `[🌐 Project Page]` links, one per line using `<br>`. Keep the icon inside the clickable label and use `&nbsp;` between label words to prevent wrapping. Use `—` when neither link is available. An official survey companion collection can serve as its Project Page; keep other resources and reading-note links in supporting documents.
 
-## 提交前检查
+Use a venue year from an official publication page or author announcement. A general coding engine is not necessarily the full embodied experiment release; label partial releases precisely in notes. Clearly mark third-party code as `Unofficial`.
 
-- 标题、日期和链接已核验；正式出版信息有来源支持。
-- 主分类正确，论文表格按首次公开日期倒序排列。
-- Markdown 表格列数一致，GitHub 预览中的目录和链接可用。
-- 新增笔记已加入笔记索引。
+The sorting month is Arxiv v1 when available, even if a later conference/journal venue is recorded. The venue edition year and first release month describe different events; do not combine the edition year with an unrelated Arxiv month. Record agent setup, environment details, and code artifacts in notes as needed.
 
-提交标题可用 `Add: Paper Name`、`Fix: Resource Link` 或 `Notes: Paper Name`。重大分类调整可先通过 issue 说明理由。
+## Category Boundaries
+
+Use the primary contribution to select a category. Model Training focuses on weight updates to the foundation, reasoning, or code-generation model that serves as the embodied agent. Harness covers code execution and repair, tool/skill orchestration, grounded action interfaces, memory, verification, external harness optimization, and workflows that train a separate downstream robot policy. Follow the main contribution for papers that include both runtime design and model training; do not duplicate rows. See the [boundary examples](docs/TAXONOMY.md#boundary-examples).
+
+## Add Resources or Reading Notes
+
+- Add environment and interface resources to [docs/RESOURCES.md](docs/RESOURCES.md).
+- Copy [notes/TEMPLATE.md](notes/TEMPLATE.md) to `notes/YYYY-short-name.md` for a reading note.
+- Add the note to [notes/README.md](notes/README.md).
+- Distinguish the authors' findings, your interpretation, and unresolved questions.
+
+## Before Submitting
+
+- The contribution fits the code-agent and game/robot scope and is not a duplicate.
+- The category follows the paper's primary contribution.
+- Every paper row has exactly four columns.
+- Venue, task names, and official links are verified; first release months use `YYYY-MM`, with preprints shown as `Arxiv YYYY-MM`.
+- Rows are sorted by first release month, using Arxiv v1 when available, newest first; same-month titles are alphabetized case-insensitively.
+- Markdown tables, local links, and navigation work in Preview.
+- New notes are included in the note index.
+
+Suggested PR titles: `Add: Paper Name`, `Fix: Resource Link`, or `Notes: Paper Name`.

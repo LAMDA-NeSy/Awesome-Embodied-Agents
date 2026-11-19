@@ -1,65 +1,67 @@
-# 日常维护指南
+# Maintaining the Collection
 
-## 日常添加一篇文章
+## Add a Paper
 
-1. 打开 [README.md](../README.md)，选择对应主题。
-2. 按 [贡献指南](../CONTRIBUTING.md) 复制表格行，填写论文、会议、首次公开日期、代码和项目页。
-3. 在分类内按日期从新到旧插入。
-4. 如果做了精读，复制 [笔记模板](../notes/TEMPLATE.md)，并更新 [笔记索引](../notes/README.md)。
+1. Check the code-agent and game/robot scope in [TAXONOMY.md](TAXONOMY.md).
+2. Open [README.md](../README.md) and choose Survey, Harness, Model Training, or Benchmark according to the primary contribution; keep that section order.
+3. Copy the row format from [CONTRIBUTING.md](../CONTRIBUTING.md).
+4. Fill Paper, Venue, Task, and Links. Link the full paper title directly to the primary paper. Show the Arxiv v1 month as `Arxiv YYYY-MM`; for published papers, keep the verified venue and edition year above it using `<br>`. For papers without Arxiv, use `Released YYYY-MM` for the first official release. Links contains only official 💻 Code and 🌐 Project Page links, one per line using `<br>`; use `—` if neither is available.
+5. Insert the paper by first release month, newest first within its category. Sort titles within the same month in ascending, case-insensitive alphabetical order using the full title, without considering the day or method alias.
+6. For detailed reading, copy [notes/TEMPLATE.md](../notes/TEMPLATE.md) and update the [note index](../notes/README.md).
+7. When adding or removing papers, update the `papers` badge count and its alt text in `README.md` to match the total number of paper rows across the four categories.
 
-`README.md` 是论文索引的唯一维护入口，不需要运行构建工具或同步其他数据文件。`Updates` 用于记录重要新增和结构调整，可在每次集中整理后更新一条。
+The paper catalogue is maintained directly in Markdown. No build or synchronization step is required.
 
-## 直接在 GitHub 编辑
+## Edit on GitHub
 
-进入自己的仓库，打开 `README.md`，点击编辑按钮，修改后使用 Preview 查看表格，再提交修改。精读笔记可以通过 Add file 创建。
+Open `README.md` in your repository, choose Edit, make the change, and inspect Preview before committing. Use Add file to create a reading note.
 
-其他人可以使用 **Issues → New issue → Add a paper** 推荐论文，也可以提交 PR；仓库已配好论文推荐、链接纠错和 PR 模板。
+Contributors can suggest papers through **Issues → New issue → Add a paper**, report metadata errors, or submit a PR. The templates request the category, publication, task types, and source links.
 
-## 本地编辑
+## Edit Locally
 
-在仓库目录中编辑 Markdown 文件，然后提交和推送：
+After editing the relevant files:
 
 ```bash
-git add README.md notes/
+git add README.md CONTRIBUTING.md LICENSE docs/ notes/ .github/ assets/
 git commit -m "Add: Paper Name"
 git push
 ```
 
-若修改了其他文件，将相应路径一起加入 `git add`。
+Stage the paths you actually changed. Update the taxonomy and issue-form category options together if you rename a category.
 
-## 首次发布到 GitHub
+## Repository and Authentication
 
-建议仓库名：`Awesome-Embodied-Agents`。
+The collection is hosted at [LAMDA-NeSy/Awesome-Embodied-Agents](https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents).
 
-建议描述：
+Suggested GitHub description:
 
 ```text
-A curated collection of papers, datasets, benchmarks, and simulators for embodied agents.
+This project aims to collect and curate research papers on code agents for embodied intelligence in games and robotics, including but not limited to surveys, agent harnesses, model training and post-training methods, and benchmarks.
 ```
 
-如果尚未登录 GitHub CLI，先在终端完成登录：
+Authenticate the GitHub CLI if necessary:
 
 ```bash
-gh auth login
+gh auth login --hostname github.com --git-protocol https --web
 ```
 
-确认本地已有初始提交后，在当前仓库目录执行以下命令创建公开仓库并推送。若需要私有仓库，将 `--public` 改为 `--private`：
+For a local checkout without a remote, connect the existing repository:
 
 ```bash
-gh repo create Awesome-Embodied-Agents --public --source=. --remote=origin --push --description "A curated collection of papers, datasets, benchmarks, and simulators for embodied agents."
+git remote add origin https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents.git
 ```
 
-如果已在 GitHub 创建了空仓库，则使用该仓库实际的 Git 地址：
+If `origin` already exists, check `git remote -v` before making changes. Fetch and inspect the remote branch before pushing so that existing contributions are preserved. Push the current branch with `git push -u origin main` after committing the intended changes.
 
-```bash
-git remote add origin YOUR_GITHUB_REPOSITORY_GIT_URL
-git push -u origin main
-```
+The README's contributors, last commit, Stars, and Forks badges use this repository's live GitHub data. Keep their image and destination URLs in sync if the repository is renamed or transferred. The Papers badge is maintained with the paper catalogue.
 
-建议 topics：`awesome`、`awesome-list`、`embodied-ai`、`embodied-agents`、`robotics`、`vision-language-action`、`large-language-models`。
+Suggested topics: `awesome-list`, `coding-agents`, `code-as-policies`, `embodied-ai`, `game-agents`, `robotics`, `program-synthesis`.
 
-## 后续扩展
+## Expand the Catalogue
 
-- 论文数量增加后，可按年份或更细主题拆分目录，并保留主页入口。
-- 如需增加星标徽章、issue 快捷链接或项目主页，使用实际 GitHub 仓库地址。
-- 初始收录用于搭建阅读框架；后续可以围绕自己的综述问题逐步补充新论文与详细笔记。
+Keep the section order Survey, Harness, Model Training, Benchmark and the four-column table format consistent. Use specific game titles and task names in Task. Add formal publication information above `Arxiv YYYY-MM` when verified, retaining the first release month and the same-month alphabetical sorting rule.
+
+Record agent setup, exact environment interfaces, observation privilege, rollout budgets, and adaptation details in reading notes. Keep environment resources in [RESOURCES.md](RESOURCES.md).
+
+For Harness additions, use [HARNESS_GUIDE.md](HARNESS_GUIDE.md) to distinguish executable programs, tool/skill orchestration, semantic actions, and external harness optimization. A model with a code repository is not automatically a coding agent. Verify the evaluated runtime and assign hybrid papers once by their primary contribution.

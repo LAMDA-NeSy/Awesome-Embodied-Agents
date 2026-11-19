@@ -1,17 +1,17 @@
 name: Fix metadata or a link
-description: Report an incorrect date, venue, category, or URL / 报告信息或链接错误
+description: Report an incorrect category, venue/date, task, or URL
 title: "[Fix] "
 body:
   - type: input
     id: entry
     attributes:
-      label: Affected paper or resource / 对应条目
+      label: Affected paper or resource
     validations:
       required: true
   - type: textarea
     id: correction
     attributes:
-      label: Problem and suggested correction / 问题与修改建议
-      description: Include the current value, replacement, and a supporting official source.
+      label: Problem and suggested correction
+      description: Include the current value, replacement, and supporting primary-source evidence.
     validations:
       required: true

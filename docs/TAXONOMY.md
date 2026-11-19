@@ -1,38 +1,101 @@
-# Taxonomy · 分类说明
+# Scope and Taxonomy
 
-## 整理对象
+## Scope
 
-这里的 Embodied Agent 指在真实或模拟的空间环境中，通过感知、决策和行动完成任务的智能体。它可以是移动机器人、机械臂、移动操作平台，也可以是 3D 仿真或游戏环境中的具身角色。
+This collection covers code agents and agent harnesses for **games and robots**, including purpose-built LLM code-generation frameworks and general-purpose coding agents connected to embodied environments.
 
-重点关注 LLM/VLM 驱动的系统，以及支撑这些系统的表征、策略学习和评测方法。每个候选条目应能回答：**智能体观察什么、采取什么行动，以及它与环境如何形成闭环？**
+A relevant method generates, executes, debugs, or improves executable programs, skills, training components, or experimental code for an embodied setting, or contributes a substantive harness for embodied model decisions through tools, skills, memory, verification, or grounded action interfaces. A public implementation alone does not establish a code-agent or harness contribution. Record whether the actual interface is executable code, tool/skill calls, or action units.
 
-通用语言模型、纯文本聊天、网页和桌面操作研究，若没有直接的具身任务、空间交互或可迁移的具身机制，通常更适合其他论文库。游戏中的具身智能体可收录，并在笔记中说明环境和动作接口。
+Model Training also covers training foundation or reasoning models themselves to act as agents in games or robotics. These models may generate code, tool calls, or structured actions. Native-use models are included as agent-training references, with their actual output interface recorded explicitly.
 
-## 主分类
+Learned embodied reasoning components, such as failure-diagnosis VLMs, are also included as supporting Model Training references. Record their role explicitly rather than presenting a critic or monitor as an action-generating policy.
 
-| 分类 | 核心问题 | 典型内容 |
+Survey and Benchmark are supporting reference categories: surveys may describe agentic robotics at the system level, and benchmarks may evaluate capabilities needed by embodied code agents even when their native interface is actions or skill calls. Their broader role must be clear from the entry and notes.
+
+Games may expose avatars, controllable units, or game-world interactions through APIs or screenshots and input events. Robotics includes simulated and physical robots. A robot simulator belongs to the robotics scope. Game generation is relevant when generated environments support embodied-agent training or evaluation.
+
+Game agents also include interactive fiction, board/card games, and strategic dialogue games with explicit rules, states, and consequential actions. Record their native text or dialogue interface rather than assuming visual control or executable-code generation.
+
+## Categories
+
+| Category | Main Contribution | Examples |
 | :--- | :--- | :--- |
-| Surveys | 如何建立领域地图？ | 具身智能体综述、VLA 综述、技术框架 |
-| Foundation Models and VLA | 如何统一多模态理解与行动？ | 通用具身模型、VLA、动作表示、跨本体泛化 |
-| Perception and Spatial Grounding | 如何把语言和观察对应到环境？ | 3D 场景图、语义地图、开放词汇感知、空间定位 |
-| Reasoning, Planning and Tool Use | 如何从目标得到可执行计划？ | 任务分解、技能选择、代码生成、执行反馈、重规划 |
-| Memory and Lifelong Learning | 如何积累和复用经验？ | 情景记忆、技能库、持续学习、在线适应、反思 |
-| World Models and Prediction | 如何预测行动后果？ | 视频或潜变量预测、世界模型、模型辅助规划 |
-| Navigation and Exploration | 如何在环境中寻找和到达目标？ | VLN、ObjectNav、主动探索、导航中的空间决策 |
-| Manipulation and Control | 如何完成具体物理交互？ | 操控策略、轨迹生成、扩散策略、全身控制 |
-| Multi-Agent Cooperation | 如何与其他主体共同完成任务？ | 多机器人通信、协同分工、合作规划、人机合作 |
-| Evaluation and Reliability | 如何衡量能力并定位失败？ | 具身评测、泛化、长程执行、鲁棒性、安全与可靠性 |
+| Survey | System-level review, perspective, taxonomy, or roadmap for agentic embodied systems; also focused reviews of code-based methods | Envisioning Agentic Robotics; Towards Agentic Robots; Weights or Skills? |
+| Harness | Agent architecture, code execution, tool/skill orchestration, action interfaces, feedback, memory, verification, or harness optimization, including code-driven training of downstream robot policies | Harness VLA; HarnessVLN; uni-robot-agent; Show-Harness; OpenRUA; RoboArchitect; Voyager; Eureka |
+| Model Training | Training the foundation, reasoning, or code-generation model serving as the embodied agent, including SFT and RL for game or robot use | PEAR; CaPtain; ZAP; AgenticRoboRL; Guava; CrossHA; VAGEN; JARVIS-VLA; RoboCodeX |
+| Benchmark | Direct code-agent evaluation and complementary tests of embodied planning, tool use, memory, exploration, and control | Embodied First Exam, EmbodiedSWE, CaP-X, CodeActionBench, RobotWorld, RoboMME |
 
-## 交叉论文怎么放
+These categories describe a paper's primary contribution. Task types, agent setups, and code artifacts are recorded as paper attributes or reading-note details.
 
-按**最主要的研究贡献**确定主页位置。例如，以场景图表征为主要贡献的工作放入空间感知；以用场景图完成长程任务为主要贡献的工作可放入规划。通用 VLA 放入基础模型，专门研究操控动作生成的方法放入操控与控制。
+## Assignment Rules
 
-主页采用单一主分类，阅读笔记可以记录多个关联主题。分类随着收录内容增长调整；只有出现足够多且研究问题清晰的工作时，再拆出新的子分类。
+Give each paper one primary location:
 
-## 资源与论文的关系
+1. Use **Survey** for a review, perspective, taxonomy, or roadmap. The two supplied agentic-robotics papers establish the intended system-level scope; code-specific reviews are additional references.
+2. Use **Harness** when the main contribution is how models, tools, programs, feedback, and persistent state are organized into an embodied agent or experimental workflow.
+3. Use **Model Training** when the foundation, reasoning, or code-generation model that serves as the agent is itself trained for embodied behavior. Record the trained parameters, objective, and deployment output interface. Training a separate downstream robot policy through generated rewards or configurations belongs under Harness when the contribution is the code-driven experimental workflow.
+4. Use **Benchmark** when evaluation infrastructure or capability measurement is the main contribution, even if the paper also introduces a solver or training pipeline. Include useful broader agentic-robotics benchmarks, but identify whether they measure programs, actions, skill calls, or offline predictions in the [benchmark guide](BENCHMARK_GUIDE.md).
 
-- **Dataset**：主要用于训练或分析的数据。
-- **Benchmark**：包含任务、评测协议和指标的评价体系。
-- **Simulator**：用于运行交互、采集轨迹或训练策略的环境和平台。
+For hybrid papers, follow the contribution emphasized in the method and evaluation. Explain secondary contributions in a reading note rather than duplicating the row.
 
-一个平台可以承担多个角色。主页资源表优先按主要用途放置，其他用途写入描述；相关论文保留在论文分类中。
+### Reference Frameworks
+
+[Envisioning Agentic Robotics](../notes/2026-envisioning-agentic-robotics.md) distinguishes the model, the embodied harness, callable skills, and real-time control, and separates model-level evaluation from closed-loop system evaluation. [Towards Agentic Robots](../notes/2026-towards-agentic-robots.md) organizes the field by Model, Data, Environment, and Harness. These functional frameworks inform paper selection; they do not replace this repository's four catalogue categories or its Game and Robot scope.
+
+### Boundary Examples
+
+- **PEAR → Model Training:** robot-use RL updates the reasoning model itself. It is a native robot-use training reference whose deployment outputs are structured end-effector actions; executable program generation is not required for this entry. See the [reading note](../notes/2026-pear.md).
+- **RoboCodeX → Model Training:** specialized multimodal pretraining and self-updating supervised fine-tuning update the behavior-code generation model itself.
+- **RoboPro / RoboEvolve → Model Training:** the main learning target is the policy-code model or the planner/simulator, rather than only a library of generated programs.
+- **AHA → Model Training:** instruction-tuning updates a failure-reasoning VLM used as a critic in embodied systems. Its output is a natural-language diagnosis, not a robot action.
+- **CaPtain / AgenticRoboRL → Model Training:** SFT and multi-turn RL update the agent model that generates robot-control code or selects skills.
+- **ZAP / Guava → Model Training:** simulation-based training or distillation updates a compact model's robot-use decisions through its action/tool interface.
+- **CrossHA / VAGEN / JARVIS-VLA → Model Training:** training updates visual agents for game interaction, action selection, or world-state reasoning. See the [training-method guide](MODEL_TRAINING_GUIDE.md) for their specific interfaces.
+- **Werewolf LSPO / GameTalk / MARSHAL / VAM → Model Training:** preference learning or RL updates the language model for strategic moves, communication, or multi-agent interaction. Language can be the native game action.
+- **Player-1 / Odysseus / G1 → Model Training:** supervised initialization or RL updates a pretrained VLM for interactive game control; the [game-agent guide](GAME_AGENT_GUIDE.md) records each recipe.
+- **Eureka / DrEureka → Harness:** LLM-generated rewards and simulation configurations organize the training of a separate robot policy. Their primary contribution is the code-driven learning workflow.
+- **Voyager / Playful Agentic Robot Learning → Harness:** behavior improves through executable skills and memory; skill accumulation alone does not imply model-weight training.
+- **RHO → Harness:** the method searches and improves policy repositories. Optimizing code is distinct from training model weights.
+- **ENPIRE → Harness:** the primary contribution is the coding-agent and physical-experiment loop. Gradient-based policy learning is one supported component.
+- **RoboClaw → Harness:** the VLM controller organizes data collection, downstream policy learning, self-resetting, and task execution; learning downstream primitives does not imply controller-model training.
+- **RoboCoder / DROC / Statler → Harness:** feedback, reusable correction knowledge, or explicit world-state memory improve robot programs without establishing weight updates to the foundation model. See the [code-as-policy cross-check](CODE_AS_POLICY_GUIDE.md).
+- **Harness VLA / HarnessVLN → Harness:** frozen models are organized through manipulation primitives or navigation tools, memory, and execution checks; their native outputs need not be executable code.
+- **uni-robot-agent / Show-Harness → Harness:** a shared robot-use runtime or semantic action interpreter is the primary system contribution. Record coding-agent runtimes and direct action/tool configurations separately.
+- **RoboArchitect / EMHO / KPHarness → Harness:** optimization revises external control logic, memory, or probing around a fixed model rather than necessarily updating its weights.
+- **Code World Models / GameSense → Harness:** generated simulators or execution modules organize game decisions; code generation and downstream module training do not establish a foundation-model update.
+- **Continual Harness → Harness:** online edits refine prompts, subagents, skills, and memory; its additional model co-training experiments are recorded separately.
+- **NavGPT / MapGPT / InstructNav / Optimus-1 / JARVIS-1 / GITM → Harness:** custom planning, memory, and action/controller interfaces provide relevant navigation or game-agent architectures without implying general-purpose coding-agent use. See the [harness guide](HARNESS_GUIDE.md).
+- **EmbodiedSWE → Benchmark:** its benchmark is the primary catalogue entry; trajectory generation and agent training are additional contributions.
+- **Orak / TeamCraft / lmgame-Bench → Benchmark:** evaluation suites remain the primary entries despite supporting datasets, harnesses, and model-training experiments.
+- **Gauntlet / AAArena → Benchmark:** evaluation measures coding agents developing executable game policies, with development budgets distinguished from frozen-policy gameplay.
+
+## Four-Column Paper Format
+
+| Column | Convention |
+| :--- | :--- |
+| Paper | Full title linked directly to the primary paper; bold is optional; keep any method alias outside the link |
+| Venue | First release month as `Arxiv YYYY-MM` (Arxiv v1); for published papers, retain the verified venue and edition year above it, such as `ICML 2024<br>Arxiv 2024-02`; without Arxiv, use `Released YYYY-MM` |
+| Task | Specific game names or robot tasks, separated by semicolons |
+| Links | Only available official `[💻 Code]` and `[🌐 Project Page]` links, one per line using `<br>`; use `—` if neither is available |
+
+Use `&nbsp;` within link labels to prevent wrapping. Official survey companion collections may be linked as Project Page. Other resources and reading notes belong in supporting documents; the reading-note index has a separate Notes column.
+
+Use `Arxiv` followed by the first submission month, for example `Arxiv 2026-11`. Keep the section order Survey, Harness, Model Training, Benchmark. Within each category, sort by first release month (`YYYY-MM`), newest first, including papers whose formal venue is later. Sort papers in the same month by the full title in ascending, case-insensitive alphabetical order; the day and method alias do not affect this order. For work without Arxiv, use the first official paper release month. A repository announcement or a later revision does not replace the first release month.
+
+Task examples include `Minecraft`, `Red Dead Redemption II`, `Manipulation`, `Navigation`, `Locomotion`, and `Assembly`. A survey can use its covered task family or a description such as `Robot learning`. Record concrete tasks whenever the paper reports them.
+
+## Reading-Note Details
+
+The compact catalogue has four columns. Capture the following details in notes when useful:
+
+- **Agent setup:** Custom, General-purpose, or Unspecified. A custom framework can include repair and memory; a general-purpose setup reuses an existing coding agent, such as Codex or Claude Code.
+- **Native-use training references:** use Not applicable for the coding-agent setup when the model directly emits actions without generating executable programs; record that action interface instead.
+- **Tool/action harness references:** identify the custom runtime or general-purpose coding agent and its native interface. Mark code-generation fields Not applicable when the agent selects tools or action units without emitting programs.
+- **Model versus harness:** record the language model separately from the coding-agent framework. A model name alone does not identify the harness.
+- **Environment:** exact game title, simulator, robot platform, and simulation versus real hardware.
+- **Code artifact:** task program, skill, reward, environment generator, or repository.
+- **Adaptation:** execution-time repair, across-episode code search, weight updates, or a mixture.
+- **Training target:** identify which model receives weight updates, the training objective and data, and whether a separate downstream robot policy is learned.
+- **Evaluation conditions:** observation privilege, action abstraction, human-provided skills, resets, trial counts, and interaction budgets.
+
+Category assignments are editorial decisions supported by each paper's contribution and evidence, and can be revised as the collection grows.

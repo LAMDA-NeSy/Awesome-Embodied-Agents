@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License: MIT"></a>
-  <a href="#survey"><img src="https://img.shields.io/badge/papers-141-3b82f6" alt="Papers: 141"></a>
+  <a href="#survey"><img src="https://img.shields.io/badge/papers-148-3b82f6" alt="Papers: 148"></a>
   <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/graphs/contributors"><img src="https://img.shields.io/github/contributors/LAMDA-NeSy/Awesome-Embodied-Agents" alt="GitHub contributors"></a>
   <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/commits/main"><img src="https://img.shields.io/github/last-commit/LAMDA-NeSy/Awesome-Embodied-Agents" alt="GitHub last commit"></a>
   <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/stargazers"><img src="https://img.shields.io/github/stars/LAMDA-NeSy/Awesome-Embodied-Agents?style=social&amp;label=Stars" alt="GitHub stars"></a>
@@ -35,8 +35,15 @@ System-level surveys, perspectives, and roadmaps on agents in games and robotics
 | Paper | Venue | Task | Links |
 | :--- | :---: | :--- | :--- |
 | **[Envisioning Agentic Robotics: A New Era of Robotic Systems](https://arxiv.org/abs/2611.18359)** | Arxiv 2026-11 | Agentic robotics; Manipulation; Navigation | — |
+| **[A Survey of Agentic Robotics: Toward Continual Self-Improvement](https://www.alphaxiv.org/abs/2610.rsi-agentic-robotics)** | alphaXiv<br>Released 2026-10 | Robot task orchestration; Motion generation; Continual self-improvement | [🌐&nbsp;Project&nbsp;Page](https://github.com/jiaming-ai/awesome-agentic-robotics) |
+| **[Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use to Robot-Use](https://arxiv.org/abs/2610.30108)** | Arxiv 2026-10 | Computer use; Robot use; Embodied capability evaluation | [🌐&nbsp;Project&nbsp;Page](https://showlab.github.io/Awesome-Multimodal-Embodied-Agent/) |
 | **[Towards Agentic Robots: Model, Data, Environment, and Harness](https://arxiv.org/abs/2610.20442)** | Arxiv 2026-10 | Agentic robotics; Manipulation; Navigation | [🌐&nbsp;Project&nbsp;Page](https://github.com/chonghanqin/Awesome-Agentic-Robots) |
+| **[Who Improves the Robot? Toward Physical Recursive Self-Improvement](https://arxiv.org/abs/2610.18842)** | Arxiv 2026-10 | Robot skill adaptation; Physical recursive self-improvement; Verification | [🌐&nbsp;Project&nbsp;Page](https://github.com/SAIL-Research-Lab/Physical-RSI) |
+| **[Embodied Agentic Harnesses for Physical Intelligence: A Survey](https://doi.org/10.31224/8297)** | engrXiv<br>Released 2026-09 | Embodied execution; Runtime monitoring; Recovery | [🌐&nbsp;Project&nbsp;Page](https://github.com/yuhuang-ca/Survey-of-Embodied-Agentic-Harness) |
+| **[From Language Models to World-Acting Systems: Progress and Limits of Agentic AI across Digital, Social, Virtual, and Physical Environments](https://arxiv.org/abs/2609.04894)** | Arxiv 2026-09 | Virtual environments; Robot control; Delegation and recovery | — |
 | **[Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills](https://arxiv.org/abs/2608.01851)** | Arxiv 2026-08 | Robot learning; Code-based skill acquisition | — |
+| **[From World Action Models to Embodied Brains: A Roadmap for Open-World Physical Intelligence](https://arxiv.org/abs/2607.11689)** | Arxiv 2026-07 | Open-world robot control; Action consequence prediction; Closed-loop learning | — |
+| **[Harness Engineering for Physical AI: Robot Middleware Is the Harness Layer](https://arxiv.org/abs/2606.09416)** | ACM Middleware 2026<br>Arxiv 2026-06 | Robot control; Real-time scheduling; Middleware | — |
 | **[Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds](https://arxiv.org/abs/2605.09965)** | Arxiv 2026-05 | Game agents; Virtual worlds; Cross-game generalization | [🌐&nbsp;Project&nbsp;Page](https://thusi-lab.github.io/Awesome-LFMs-Play-Games/) |
 
 <a id="harness"></a>

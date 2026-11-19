@@ -16,30 +16,28 @@ Model Training also includes native game/robot-use models. For these entries, id
 2. Select one category: `Survey`, `Harness`, `Model Training`, or `Benchmark`, in that display order.
 3. Insert one row using the four-column format below.
 4. Verify publication information, task types, and official links with primary sources.
-5. Sort by first paper release month (`YYYY-MM`), newest first within the category; use Arxiv v1 when available, otherwise the first official paper release. Within the same month, sort by the full paper title in ascending, case-insensitive alphabetical order; do not use the day or method alias to break ties.
+5. Sort by the month shown in Venue, newest first within the category. Within the same month, sort by full title in ascending alphabetical order, ignoring case.
 
 ```markdown
 | Paper | Venue | Task | Links |
 | :--- | :---: | :--- | :--- |
-| **[Full Paper Title](PAPER_URL)** | ICML 2024<br>Arxiv 2024-02 | Manipulation; Navigation | [💻&nbsp;Code](CODE_URL)<br>[🌐&nbsp;Project&nbsp;Page](PROJECT_URL) |
+| **[Full Paper Title](PAPER_URL)** | ICML<br>2024-07 | Object Manipulation; Indoor Navigation | [💻&nbsp;Code](CODE_URL)<br>[🌐&nbsp;Project&nbsp;Page](PROJECT_URL) |
 ```
 
-For an Arxiv preprint with only a recorded paper link:
+For a preprint with only a paper link:
 
 ```markdown
-| **[Full Paper Title](PAPER_URL)** | Arxiv YYYY-MM | Minecraft | — |
+| **[Full Paper Title](PAPER_URL)** | Arxiv<br>YYYY-MM | Minecraft | — |
 ```
 
 ## Column Conventions
 
-- **Paper:** link the full title directly to the primary paper. Keep an optional method alias outside the title link.
-- **Venue:** show the first Arxiv submission month (v1) as `Arxiv YYYY-MM`, for example `Arxiv 2026-11`. For published papers, retain the verified conference/journal and edition year on the first line, followed by the Arxiv month on a second line, for example `ICML 2024<br>Arxiv 2024-02`. For work without Arxiv, record the first official release as `Released YYYY-MM` beneath the venue.
-- **Task:** use concrete game names or tasks, such as `Minecraft`, `Manipulation`, `Navigation`, or `Locomotion`. Separate multiple tasks with semicolons.
+- **Paper:** link only the full paper title to the primary paper. Retain names that appear in the official title.
+- **Venue:** write the formal venue and month on separate lines using `<br>`. Use the conference month for conference papers and the issue month or publisher's publication month for journal articles. For preprints, use `Arxiv<br>YYYY-MM` with the first public preprint month and link the title to the original source.
+- **Task:** capitalize the first letter of each word while preserving acronyms and existing capitalization within names. Separate multiple tasks with semicolons.
 - **Links:** include only available official `[💻 Code]` and `[🌐 Project Page]` links, one per line using `<br>`. Keep the icon inside the clickable label and use `&nbsp;` between label words to prevent wrapping. Use `—` when neither link is available. An official survey companion collection can serve as its Project Page; keep other resources and reading-note links in supporting documents.
 
-Use a venue year from an official publication page or author announcement. A general coding engine is not necessarily the full embodied experiment release; label partial releases precisely in notes. Clearly mark third-party code as `Unofficial`.
-
-The sorting month is Arxiv v1 when available, even if a later conference/journal venue is recorded. The venue edition year and first release month describe different events; do not combine the edition year with an unrelated Arxiv month. Record agent setup, environment details, and code artifacts in notes as needed.
+Verify venues and dates against the publisher, conference, or authors. Record agent setup, environment details, and code artifacts in notes as needed. Label partial releases and third-party code in the notes.
 
 ## Category Boundaries
 
@@ -57,8 +55,8 @@ Use the primary contribution to select a category. Model Training focuses on wei
 - The contribution fits the code-agent and game/robot scope and is not a duplicate.
 - The category follows the paper's primary contribution.
 - Every paper row has exactly four columns.
-- Venue, task names, and official links are verified; first release months use `YYYY-MM`, with preprints shown as `Arxiv YYYY-MM`.
-- Rows are sorted by first release month, using Arxiv v1 when available, newest first; same-month titles are alphabetized case-insensitively.
+- Venue names and verified months appear on separate lines. Preprint rows use `Arxiv<br>YYYY-MM`.
+- Rows are sorted newest first by the month shown in Venue, with same-month titles alphabetized case-insensitively.
 - Markdown tables, local links, and navigation work in Preview.
 - New notes are included in the note index.
 

@@ -73,14 +73,14 @@ For hybrid papers, follow the contribution emphasized in the method and evaluati
 
 | Column | Convention |
 | :--- | :--- |
-| Paper | Full title linked directly to the primary paper; bold is optional; keep any method alias outside the link |
-| Venue | First release month as `Arxiv YYYY-MM` (Arxiv v1); for published papers, retain the verified venue and edition year above it, such as `ICML 2024<br>Arxiv 2024-02`; without Arxiv, use `Released YYYY-MM` |
-| Task | Specific game names or robot tasks, separated by semicolons |
+| Paper | Full title linked directly to the primary paper |
+| Venue | Verified venue and month on separate lines, such as `ICML<br>2024-07`. Preprints use `Arxiv<br>YYYY-MM` with their first public preprint month |
+| Task | Specific game names or robot tasks with each word capitalized, separated by semicolons |
 | Links | Only available official `[💻 Code]` and `[🌐 Project Page]` links, one per line using `<br>`; use `—` if neither is available |
 
 Use `&nbsp;` within link labels to prevent wrapping. Official survey companion collections may be linked as Project Page. Other resources and reading notes belong in supporting documents; the reading-note index has a separate Notes column.
 
-Use `Arxiv` followed by the first submission month, for example `Arxiv 2026-11`. Keep the section order Survey, Harness, Model Training, Benchmark. Within each category, sort by first release month (`YYYY-MM`), newest first, including papers whose formal venue is later. Sort papers in the same month by the full title in ascending, case-insensitive alphabetical order; the day and method alias do not affect this order. For work without Arxiv, use the first official paper release month. A repository announcement or a later revision does not replace the first release month.
+Within each category, sort by the displayed month, newest first. Sort papers in the same month by full title in ascending alphabetical order, ignoring case. See the [column conventions](../CONTRIBUTING.md#column-conventions) for how to determine the month.
 
 Task examples include `Minecraft`, `Red Dead Redemption II`, `Manipulation`, `Navigation`, `Locomotion`, and `Assembly`. A survey can use its covered task family or a description such as `Robot learning`. Record concrete tasks whenever the paper reports them.
 

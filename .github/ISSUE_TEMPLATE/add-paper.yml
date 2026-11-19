@@ -9,7 +9,7 @@ body:
     id: paper_title
     attributes:
       label: Paper
-      description: Full paper title; this becomes the clickable Paper cell in the table.
+      description: Official full title. This becomes the clickable Paper cell.
       placeholder: Full title
     validations:
       required: true
@@ -28,16 +28,16 @@ body:
     id: venue
     attributes:
       label: Venue
-      description: Use Arxiv YYYY-MM for the v1 month. For published papers, retain the verified venue and edition year above it using <br>.
-      placeholder: ICML 2024<br>Arxiv 2024-02, or Arxiv 2026-11
+      description: Give the formal venue or use Arxiv for a preprint. The month appears on a separate line in the table.
+      placeholder: ICML or Arxiv
     validations:
       required: true
   - type: input
     id: task
     attributes:
       label: Task
-      description: Use game names or concrete robot tasks; separate multiple tasks with semicolons.
-      placeholder: Minecraft; Manipulation; Navigation
+      description: Capitalize each word in game names or concrete robot tasks and separate multiple tasks with semicolons.
+      placeholder: Minecraft; Object Manipulation; Indoor Navigation
     validations:
       required: true
   - type: input
@@ -61,9 +61,9 @@ body:
   - type: input
     id: first_release
     attributes:
-      label: First paper release month
-      description: Use Arxiv v1 when available, otherwise the first official release. Sort months newest first and same-month full titles alphabetically, ignoring case; the table still has four columns.
-      placeholder: YYYY-MM; Arxiv v1 when applicable
+      label: Venue month
+      description: Use the conference or journal publication month for published papers and the first public preprint month for preprints.
+      placeholder: YYYY-MM
   - type: textarea
     id: relevance
     attributes:

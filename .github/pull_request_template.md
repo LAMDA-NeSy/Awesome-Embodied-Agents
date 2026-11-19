@@ -8,7 +8,7 @@ Select Survey, Harness, Model Training, or Benchmark. Explain the main contribut
 
 ## Sources
 
-Provide verified publication information, task types, and paper/code/project links. Include the first public release month (`YYYY-MM`) and a primary-source link for chronological sorting.
+Provide the venue and month, task types, and paper/code/project links. Include a primary source for the displayed month (`YYYY-MM`).
 
 ## Checklist
 
@@ -17,10 +17,10 @@ Provide verified publication information, task types, and paper/code/project lin
 - [ ] Harness entries identify the native code/tool/skill/action interface and distinguish custom frameworks from general-purpose coding agents.
 - [ ] Model Training entries identify the agent model being trained and its objective; downstream robot-policy training is distinguished from agent-model training.
 - [ ] Each paper row uses exactly Paper, Venue, Task, and Links, with the primary paper linked through its full title.
-- [ ] Venue shows the first release month as `Arxiv YYYY-MM` (v1), with any verified formal venue and edition year above it using `<br>`; work without Arxiv uses `Released YYYY-MM`.
-- [ ] Task contains game titles or concrete robot tasks.
+- [ ] Venue shows the verified venue and month on two lines. Preprints use `Arxiv<br>YYYY-MM`.
+- [ ] Task contains game titles or concrete robot tasks, with each word capitalized.
 - [ ] Links contains only official 💻 Code and 🌐 Project Page links, one per line using `<br>`; use `—` if neither is available.
-- [ ] Sections follow Survey, Harness, Model Training, Benchmark; rows are sorted by first release month (Arxiv v1 when available), newest first, then full title alphabetically within the same month, ignoring case.
+- [ ] Rows are sorted by the month shown in Venue, newest first, then by full title alphabetically within the same month, ignoring case.
 - [ ] Markdown tables and local links render correctly in Preview.
 - [ ] New reading notes are included in the note index, if applicable.
 - [ ] Repository content is written in English.

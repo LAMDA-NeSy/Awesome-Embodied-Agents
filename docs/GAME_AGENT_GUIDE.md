@@ -100,7 +100,7 @@ Game names identify representative evaluated settings rather than a claim to lis
 
 ## Publication and Identity Checks
 
-The catalogue orders papers by their actual first Arxiv release months, newest first, including cases whose identifiers suggest a different month. Within the same month, full titles sort alphabetically, ignoring case. Venue shows `Arxiv YYYY-MM` alongside any verified formal venue and edition year; the latter does not replace the sorting month.
+The catalogue sorts by the month shown in Venue, newest first, then by full title within the same month. For preprints, check the first submission history in cases whose identifiers suggest a different month.
 
 Primary venue sources include:
 
@@ -123,13 +123,13 @@ Primary venue sources include:
 - **lmgame-Bench:** [ICLR 2026 proceedings](https://proceedings.iclr.cc/paper_files/paper/2026/hash/83a4ea71b13bc86308a2bd0b5e07fb61-Abstract-Conference.html).
 - **Orak:** [ICLR 2026 conference page](https://iclr.cc/virtual/2026/poster/10010438).
 - **KORGym:** [NeurIPS 2025 proceedings](https://proceedings.neurips.cc/paper_files/paper/2025/hash/ebfa4297cd6419f64efe86f657ba49d0-Abstract-Conference.html).
-- **PokeAgent Challenge:** [author comments](https://arxiv.org/abs/2603.15563) identify the NeurIPS 2025 Competition Track; the 2026 preprint is sorted by its first paper release.
+- **PokeAgent Challenge:** [NeurIPS 2025](https://blog.neurips.cc/2025/06/27/neurips-2025-competitions-announced/) hosted the competition. The [report](https://arxiv.org/abs/2603.15563) first appeared as a preprint in March 2026.
 - **GameVerse:** the [official implementation](https://github.com/THUSI-Lab/GameVerse) records ICML 2026.
 - **PTCG-Bench:** [Findings of EMNLP 2026](https://aclanthology.org/2026.findings-emnlp.1689/).
 - **FlashAdventure:** [EMNLP 2025 proceedings](https://aclanthology.org/2025.emnlp-main.1192/).
 - **StarDojo:** [author comments](https://arxiv.org/abs/2507.07445) record ECCV 2026 acceptance.
 - **PokeGym:** the current [Arxiv title](https://arxiv.org/abs/2604.08340) is *Mastering PokeGym: Graph-Guided Multimodal Evolution at Test Time*. The same paper introduces the benchmark and G-EvoMAC; the catalogue includes it once.
 
-Other entries retain `Arxiv YYYY-MM` where no formal publication was verified. Paper and official project links do not establish that code, weights, datasets, and benchmark assets are all released. Missing or mismatched implementation links are omitted. In particular, the historical TextStarCraft II repository pointer currently identifies unrelated content, and the old PokeAgent speedrun URL redirects to the separate Continual Harness release; neither is labeled as a complete benchmark-code release here.
+Preprints without a verified formal publication use `Arxiv<br>YYYY-MM`. Paper and official project links do not establish that code, weights, datasets, and benchmark assets are all released. Missing or mismatched implementation links are omitted. In particular, the historical TextStarCraft II repository pointer currently identifies unrelated content, and the old PokeAgent speedrun URL redirects to the separate Continual Harness release; neither is labeled as a complete benchmark-code release here.
 
 Return to the [main catalogue](../README.md).

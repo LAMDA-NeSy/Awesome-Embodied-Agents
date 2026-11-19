@@ -19,7 +19,7 @@ The catalogue admits methods with a substantive embodied agent architecture even
 
 ## Newly Added Papers
 
-Each linked paper is the primary source for its method and task description. The catalogue sorts first Arxiv release months newest first and alphabetizes full titles within the same month, ignoring case. Setup labels describe the evaluated interface; they do not imply that every configuration in a paper uses the same runtime.
+Each linked paper is the primary source for its method and task description. The catalogue sorts by the displayed venue month, newest first, then by title within each month. Setup labels describe the evaluated interface; they do not imply that every configuration in a paper uses the same runtime.
 
 | Paper / Method | Setup and Native Interface | Harness Contribution | Task |
 | :--- | :--- | :--- | :--- |
@@ -74,7 +74,7 @@ These assignments are curation decisions based on the primary contribution, not 
 
 ## Metadata and Link Checks
 
-Paper titles and first-submission ordering were checked against the linked Arxiv abstract pages. Some identifiers and first-release months differ; use the actual v1 submission history rather than inferring chronology from the identifier. Display the first release month as `Arxiv YYYY-MM` in the main Venue column, retaining any verified formal venue and edition year on a separate line.
+Check preprint dates against the first public version. Some Arxiv identifiers have a different month from their first submissions. For formal publications, follow the [venue and month conventions](../CONTRIBUTING.md#column-conventions).
 
 Formal venues were checked using primary sources:
 
@@ -86,7 +86,7 @@ Formal venues were checked using primary sources:
 - **JARVIS-1, TPAMI 2025:** [publisher record](https://ieeexplore.ieee.org/document/10778628), volume 47, issue 3.
 - **PyRUA-Lean, CoRL Workshop 2026:** [Agentic Robotics workshop accepted-paper list](https://agentic-robotics-workshop.github.io/papers). This is a workshop venue, not a CoRL main-conference acceptance.
 
-Other newly added entries retain `Arxiv YYYY-MM` where no formal venue was verified. A submitted-to-conference note is not treated as acceptance.
+Preprints without a verified formal publication use `Arxiv<br>YYYY-MM` in the catalogue.
 
 Code and project links in the catalogue come from author paper pages, official project pages, or matching author repositories. Missing links are omitted. [RPent](https://github.com/RLinf/RPent) is the current infrastructure release linked by the [Harness VLA documentation](https://rpent.readthedocs.io/en/latest/rst_source/resources/harnessvla.html); preserve the documented reproduction branches when reproducing historical results. Link verification does not establish that an experiment has been reproduced.
 

@@ -5,8 +5,8 @@
 1. Check the code-agent and game/robot scope in [TAXONOMY.md](TAXONOMY.md).
 2. Open [README.md](../README.md) and choose Survey, Harness, Model Training, or Benchmark according to the primary contribution; keep that section order.
 3. Copy the row format from [CONTRIBUTING.md](../CONTRIBUTING.md).
-4. Fill Paper, Venue, Task, and Links. Link the full paper title directly to the primary paper. Show the Arxiv v1 month as `Arxiv YYYY-MM`; for published papers, keep the verified venue and edition year above it using `<br>`. For papers without Arxiv, use `Released YYYY-MM` for the first official release. Links contains only official 💻 Code and 🌐 Project Page links, one per line using `<br>`; use `—` if neither is available.
-5. Insert the paper by first release month, newest first within its category. Sort titles within the same month in ascending, case-insensitive alphabetical order using the full title, without considering the day or method alias.
+4. Fill Paper, Venue, Task, and Links using the [column conventions](../CONTRIBUTING.md#column-conventions). Link the full title and use `Venue<br>YYYY-MM` for publications or `Arxiv<br>YYYY-MM` for preprints.
+5. Sort by the month shown in Venue, newest first within the category. Sort titles within the same month in ascending alphabetical order, ignoring case.
 6. For detailed reading, copy [notes/TEMPLATE.md](../notes/TEMPLATE.md) and update the [note index](../notes/README.md).
 7. When adding or removing papers, update the `papers` badge count and its alt text in `README.md` to match the total number of paper rows across the four categories.
 
@@ -60,7 +60,7 @@ Suggested topics: `awesome-list`, `coding-agents`, `code-as-policies`, `embodied
 
 ## Expand the Catalogue
 
-Keep the section order Survey, Harness, Model Training, Benchmark and the four-column table format consistent. Use specific game titles and task names in Task. Add formal publication information above `Arxiv YYYY-MM` when verified, retaining the first release month and the same-month alphabetical sorting rule.
+Keep the section order Survey, Harness, Model Training, Benchmark and the four-column table format consistent. When a preprint is formally published, replace its Venue cell with the verified venue and publication month, then sort the row by the new month.
 
 Record agent setup, exact environment interfaces, observation privilege, rollout budgets, and adaptation details in reading notes. Keep environment resources in [RESOURCES.md](RESOURCES.md).
 

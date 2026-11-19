@@ -6,7 +6,7 @@
 | :--- | :--- |
 | Paper | Full title and primary-source link |
 | Authors / institutions | As reported in the paper |
-| Venue | `Arxiv YYYY-MM` using Arxiv v1; retain any verified venue and edition year above it with `<br>` |
+| Venue | `Venue<br>YYYY-MM` for publications or `Arxiv<br>YYYY-MM` for preprints |
 | First public release month | YYYY-MM; use Arxiv v1 when applicable |
 | Code / project | Official links; use `—` when not recorded |
 | Category | Survey / Harness / Model Training / Benchmark |

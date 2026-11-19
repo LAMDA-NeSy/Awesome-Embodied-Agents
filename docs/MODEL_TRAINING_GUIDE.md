@@ -89,7 +89,7 @@ Environment-specific visual-language post-training improves a foundation VLM bef
 - **CrossHA:** the [author project page](https://craftjarvis.github.io/CrossHA/) reports CVPR 2026; the paper is also available in the [CVF proceedings](https://openaccess.thecvf.com/content/CVPR2026/papers/He_Training_One_Model_to_Master_Cross-Level_Agentic_Actions_via_Reinforcement_CVPR_2026_paper.pdf).
 - **VAGEN:** verified against the [NeurIPS 2025 proceedings](https://papers.nips.cc/paper_files/paper/2025/hash/fc6688d75adde86b9df910769c1d02e3-Abstract-Conference.html).
 - **JARVIS-VLA:** verified as Findings of ACL 2025 in the [ACL Anthology](https://aclanthology.org/2025.findings-acl.920/).
-- **PEAR, CaPtain, and AgenticRoboRL:** recorded as Arxiv 2026-11, Arxiv 2026-10, and Arxiv 2026-10, respectively. Catalogue entries sort by first Arxiv release month, newest first, then alphabetically by full title within the same month, even when a later conference venue is displayed.
+- **PEAR, CaPtain, and AgenticRoboRL:** first released as preprints in 2026-11, 2026-10, and 2026-10, respectively. The catalogue sorts by the displayed venue month, then by full title within the same month.
 - Missing links are omitted. In particular, the ZAP project did not provide an official code release link when checked.
 
 CaP-X remains under Benchmark because benchmarking is its primary catalogue role; its CaP-RL training contribution can inform this reading list without duplicating the paper row.

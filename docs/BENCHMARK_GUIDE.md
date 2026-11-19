@@ -23,7 +23,7 @@ Both can inform code-agent research. Their presence in the catalogue does not me
 
 - Source: Envisioning, Section 4.2, PDF p. 30; supplemented with the original paper and official repository.
 - [📄&nbsp;Primary paper](https://arxiv.org/abs/2611.12177) · [💻&nbsp;Code](https://github.com/mll-lab-nu/embodied-first-exam) · [🌐&nbsp;Project](https://www.embodied-first-exam.ai/)
-- First Arxiv submission month: 2026-11. The catalogue displays `Arxiv 2026-11`.
+- First Arxiv submission month: 2026-11. The catalogue displays `Arxiv<br>2026-11`.
 - Coding agents can choose direct control, executable control programs, or training a policy. Tasks include spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering.
 - Keep Standard, Realtime, and Privileged results separate: they differ in observable state, reset access, and whether the environment advances while the agent reasons.
 

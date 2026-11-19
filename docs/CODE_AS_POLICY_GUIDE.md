@@ -102,7 +102,7 @@ These systems connect exploration or experiments, persistent state, and robot-po
 
 ## Venue and Link Verification
 
-The catalogue uses the first release month from the linked Arxiv submission histories. Venue shows `Arxiv YYYY-MM` and retains any verified formal venue and edition year separately. Months sort newest first; full titles within the same month sort alphabetically, ignoring case.
+The catalogue shows the verified formal venue and month or the first release month for preprints. Rows sort by the displayed month, newest first, then by full title within the same month.
 
 - **ChatGPT for Robotics, IEEE Access 2024:** verified against the publisher-registered [Crossref record](https://api.crossref.org/works/10.1109/ACCESS.2024.3387941) and [DOI](https://doi.org/10.1109/ACCESS.2024.3387941). The earlier [Microsoft report](https://www.microsoft.com/en-us/research/publication/chatgpt-for-robotics-design-principles-and-model-abilities/) was released in 2023.
 - **TidyBot, IROS 2023:** the [Arxiv author comments](https://arxiv.org/abs/2305.05658) record IROS 2023 and an Autonomous Robots publication. The catalogue uses the conference entry.

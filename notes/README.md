@@ -12,13 +12,13 @@ Link each paper through its full title, as in the main catalogue. This index use
 
 | Paper | Venue | Task | Notes |
 | :--- | :---: | :--- | :--- |
-| **[Envisioning Agentic Robotics: A New Era of Robotic Systems](https://arxiv.org/abs/2611.18359)** | Arxiv 2026-11 | Agentic robotics; Manipulation; Navigation | [📝&nbsp;Notes](2026-envisioning-agentic-robotics.md) |
-| **[Training Reasoning Models in Simulation to Natively Use Real Robots](https://arxiv.org/abs/2611.18562)** (PEAR) | Arxiv 2026-11 | Manipulation; Object pickup; Block alignment | [📝&nbsp;Notes](2026-pear.md) |
-| **[Towards Agentic Robots: Model, Data, Environment, and Harness](https://arxiv.org/abs/2610.20442)** | Arxiv 2026-10 | Agentic robotics; Manipulation; Navigation | [📝&nbsp;Notes](2026-towards-agentic-robots.md) |
-| **[Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds](https://arxiv.org/abs/2605.09965)** | Arxiv 2026-05 | Game agents; Virtual worlds; Cross-game generalization | [📝&nbsp;Notes](2026-generalist-game-agents.md) |
+| **[Envisioning Agentic Robotics: A New Era of Robotic Systems](https://arxiv.org/abs/2611.18359)** | Arxiv<br>2026-11 | Agentic Robotics; Manipulation; Navigation | [📝&nbsp;Notes](2026-envisioning-agentic-robotics.md) |
+| **[Training Reasoning Models in Simulation to Natively Use Real Robots](https://arxiv.org/abs/2611.18562)** | Arxiv<br>2026-11 | Manipulation; Object Pickup; Block Alignment | [📝&nbsp;Notes](2026-pear.md) |
+| **[Towards Agentic Robots: Model, Data, Environment, and Harness](https://arxiv.org/abs/2610.20442)** | Arxiv<br>2026-10 | Agentic Robotics; Manipulation; Navigation | [📝&nbsp;Notes](2026-towards-agentic-robots.md) |
+| **[Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds](https://arxiv.org/abs/2605.09965)** | Arxiv<br>2026-05 | Game Agents; Virtual Worlds; Cross-Game Generalization | [📝&nbsp;Notes](2026-generalist-game-agents.md) |
 
 ```markdown
-| **[Full Paper Title](PAPER_URL)** | Arxiv YYYY-MM | Minecraft | [📝&nbsp;Notes](YYYY-short-name.md) |
+| **[Full Paper Title](PAPER_URL)** | Arxiv<br>YYYY-MM | Minecraft | [📝&nbsp;Notes](YYYY-short-name.md) |
 ```
 
 ## Reading Status

@@ -1,6 +1,12 @@
 <h1 align="center">Awesome Embodied Code Agents</h1>
 
 <p align="center">
+  <a href="assets/banner-realistic.png">
+    <img src="assets/banner-realistic.png" alt="Embodied agent architecture: a foundation model and harness connect to Game and Robotics environments, with realistic hardware, Minecraft gameplay, and laboratory robot imagery." width="640">
+  </a>
+</p>
+
+<p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License: MIT"></a>
   <a href="#survey"><img src="https://img.shields.io/badge/papers-141-3b82f6" alt="Papers: 141"></a>
@@ -8,12 +14,6 @@
   <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/commits/main"><img src="https://img.shields.io/github/last-commit/LAMDA-NeSy/Awesome-Embodied-Agents" alt="GitHub last commit"></a>
   <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/stargazers"><img src="https://img.shields.io/github/stars/LAMDA-NeSy/Awesome-Embodied-Agents?style=social&amp;label=Stars" alt="GitHub stars"></a>
   <a href="https://github.com/LAMDA-NeSy/Awesome-Embodied-Agents/forks"><img src="https://img.shields.io/github/forks/LAMDA-NeSy/Awesome-Embodied-Agents?style=social&amp;label=Forks" alt="GitHub forks"></a>
-</p>
-
-<p align="center">
-  <a href="assets/banner-realistic.png">
-    <img src="assets/banner-realistic.png" alt="Embodied agent architecture: a foundation model and harness connect to Game and Robotics environments, with realistic hardware, Minecraft gameplay, and laboratory robot imagery." width="640">
-  </a>
 </p>
 
 This list collects research on **code agents and agent harnesses for embodied intelligence in games and robotics**, including custom code-generation frameworks and general-purpose coding agents. It covers **surveys, harness design, model training and post-training, and benchmarks**, from code execution and tool use to planning, memory, feedback, and self-improvement. The collection also includes native LLM/VLM game and robot agents, with tasks spanning video games, interactive fiction, strategic board/card games, manipulation, navigation, and control. Within each category, papers are sorted by first release month (Arxiv v1), newest first, then alphabetically by title.
